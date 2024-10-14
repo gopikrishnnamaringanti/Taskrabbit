@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    background: linear-gradient(180deg,rgb(230, 184, 199),white);
+    width: 100%;
+}
+h1{
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+}
+
+h1{
+    text-align: center;
+    color: rgb(233, 229, 229);
+    outline: auto;
+    background-color:rgb(251, 154, 49);
+    padding: 20px;
+    font-size: 10vh;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 60%;
+    margin-left: 280px;
+}
+.content{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form{
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px 4px rgba(0,0,0,0.1);
+    border: 2px solid black;
+    align-items: center;
+    justify-content: center;
+}
+form p{
+    margin: 10px 0;
+}
+
+label{
+    font-weight: bold;
+}
+
+input[type="text"]{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin:20px;
+}
+input[type="password"]{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
+}
+input[type="email"]{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[type="radio"]{
+    margin-left: 5px;
+}
+button{
+    background-color: pink;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid black;
+    margin-left: 230px;
+}
+
+button:hover{
+    background-color: rgb(20, 141, 20);
+}
+
+.todo{
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.todo p{
+    margin: 0;
+}
+.todo i{
+    color: #888;
+}
+
+.flash-messages {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.flash {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.flash.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.flash.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.welcomeid{
+    height: 30px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius:10px;
+    border:3px dashed lightcoral;
+    color: green;
+    text-decoration: none;
+    font-size: larger;
+}
+
+#logo{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+}
+
+.logl{
+    text-decoration: none;
+    color: green;
+    margin-left: 10px;
+}
+
+.regl{
+    text-decoration: none;
+    color: green;
+    margin-left:10px;
+}

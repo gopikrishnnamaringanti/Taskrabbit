@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RabbitTask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/10806/10806489.png" type="image/x-icon">
+
+</head>
+<body>
+  <div>    
+    <h1>RabbitTask <img src="https://cdn-icons-png.flaticon.com/512/10806/10806489.png" alt="" onclick="location.href='./profile.html'" id="logo"></h1>
+  </div>
+
+    <div class="content">
+        <p class="welcomeid">Welcome to , <a href="#profile.html" style="text-decoration: none; margin-left: 10px;">{{ session['username'] }}</a><a href="{{ url_for('logout') }}" style="text-decoration: none; margin-left:300px;">Logout</a></p>
+        <form method="post">
+          <p>
+            <b><label for="content">Todo Content</label></b>
+          </p>
+          <p>
+            <input type="text" name="content" placeholder="Add todo">
+          </p>
+          <p>
+            <b><label for="degree">Degree</label></b>
+          </p>
+          <p>
+            <input type="radio" id="degree-0" name="degree" required value="important">
+            <label for="degree-0">Important</label>
+          </p>
+          <p>
+            <input type="radio" id="degree-1" name="degree" required value="unimportant">
+            <label for="degree-1">Unimportant</label>
+          </p>
+          <button type="submit">Submit</button>
+        </form>
+        <hr>
+        {% for todo in todos %}
+             <div class="todo">
+                <p>{{ todo['content'] }} <i>({{ todo['degree'] }})</i></p>
+                <form method="post" action="{{ url_for('delete', id=todo['_id']) }}">
+                    <button type="submit"
+                    value="Delete todo"
+                    onclick="return confirm('Are you sure?')">Delete this Task</button>
+                </form>
+             </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
